@@ -2,7 +2,7 @@
 
 ### Introduction
 
-Yet another lightweight polyfill for Promise which is written by TypeScript, Follow the Promise/A+ specification.
+Less then 2 kb gzipped size polyfill for Promise which is written by TypeScript, Follow the [Promise/A+](https://github.com/promises-aplus/promises-spec)specification.
 
 ### Install
 
