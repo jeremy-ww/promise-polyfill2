@@ -2,7 +2,7 @@
 
 ### Introduction
 
-Yet another lightweight polyfill for Promise which is written by TypeScript., Follow the Promise/A+ specification.
+Yet another lightweight polyfill for Promise which is written by TypeScript, Follow the Promise/A+ specification.
 
 ### Install
 

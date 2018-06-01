@@ -1,5 +1,5 @@
 import { validateIsIterable, nextTick } from './decorators/'
-import { isFunction, thenable, isObject } from './utils/'
+import { isFunction, thenable } from './utils/'
 
 export enum PromiseStates {
   PENDING = 'PENDING',
@@ -19,7 +19,7 @@ export default class Promise {
 
   @nextTick
   private schedule () {
-    const { observers, state, value } = this
+    const { observers } = this
 
     while (observers.length > 0) {
       const { state, value } = this
@@ -43,6 +43,14 @@ export default class Promise {
   ) {
     if (!isFunction(executor))
       throw new TypeError(`Promise resolver ${executor} is not a function`)
+
+    const onRejectHandler = (reason?: any) => {
+      if (this.state !== PromiseStates.PENDING) return
+      if (reason === this)
+        throw new TypeError('Chaining cycle detected for promise')
+
+      this.settle(reason, PromiseStates.REJECTED)
+    }
 
     const onResolveHandler = (value?: any) => {
       if (this.state !== PromiseStates.PENDING) return
@@ -81,14 +89,6 @@ export default class Promise {
           if (!isThenablePromiseSettled) onRejectHandler(reason)
         }
       }
-    }
-
-    const onRejectHandler = (reason?: any) => {
-      if (this.state !== PromiseStates.PENDING) return
-      if (reason === this)
-        throw new TypeError('Chaining cycle detected for promise')
-
-      this.settle(reason, PromiseStates.REJECTED)
     }
 
     try {

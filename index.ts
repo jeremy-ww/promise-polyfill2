@@ -1,5 +1,5 @@
 import { isFunction, isNode } from './src/utils/'
-import Promise from './src/promise'
+import Promise from './src/Promise'
 
 declare global {
   interface Window { Promise?: any }
