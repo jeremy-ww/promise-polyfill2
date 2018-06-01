@@ -11,7 +11,8 @@
     "test": "node __test__/promise-test.js",
     "test:build": "npm run build && npm run test",
     "lint": "tslint --project tsconfig.json",
-    "build": "rm -rf dist/ libs/ && tsc && bili --format cjs,es,umd-min,umd"
+    "build": "rm -rf dist/ libs/ && tsc && bili --format cjs,es,umd-min,umd",
+    "postversion": "npm run build"
   },
   "keywords": [
     "promise",
