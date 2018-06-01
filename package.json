@@ -1,0 +1,38 @@
+{
+  "name": "promise-polyfill2",
+  "version": "0.0.0",
+  "description": "Yet another lightweight polyfill for Promise, Follow the Promise/A+ specification.",
+  "main": "libs/promise-polyfill2.cjs.js",
+  "module": "libs/promise-polyfill2.es.js",
+  "unpkg": "libs/promise-polyfill2.min.js",
+  "jsdelivr": "libs/promise-polyfill2.min.js",
+  "scripts": {
+    "dev": "ts-node index.ts",
+    "test": "node __test__/promise-test.js",
+    "test:build": "npm run build && npm run test",
+    "lint": "tslint --project tsconfig.json",
+    "build": "rm -rf dist/ && bili --format cjs,es,umd-min,umd"
+  },
+  "keywords": [
+    "promise",
+    "promise-polyfill"
+  ],
+  "author": "Army-U <wuchengkai0@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "10.1.3",
+    "bili": "3.1.2",
+    "promises-aplus-tests": "2.1.2",
+    "rollup-plugin-typescript2": "0.14.0",
+    "ts-node": "6.0.5",
+    "tslint": "5.10.0",
+    "tslint-config-standard": "7.0.0",
+    "typescript": "2.8.3"
+  },
+  "bili": {
+    "input": "index.ts",
+    "outDir": "libs/",
+    "exports": "named",
+    "banner": true
+  }
+}

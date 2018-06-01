@@ -1,0 +1,6 @@
+export { default as isUndefined } from './isUndefined'
+export { default as isFunction } from './isFunction'
+export { default as isIterable } from './isIterable'
+export { default as isObject } from './isObject'
+export { default as thenable } from './thenable'
+export { default as isNode } from './isNode'
