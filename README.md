@@ -4,7 +4,7 @@
 
 ### Introduction
 
-Less then 2 kb gzipped size polyfill for Promise which is written by TypeScript, Follow the [Promise/A+](https://github.com/promises-aplus/promises-spec)specification.
+Less then 2 kb gzipped size polyfill for Promise which is written by TypeScript, Follow the [Promise/A+](https://github.com/promises-aplus/promises-spec) specification.
 
 ### Install
 
