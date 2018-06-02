@@ -9,13 +9,11 @@ export default function (
   return Object.defineProperty(target, key, {
     ...descriptor,
     value (iterable: Iterator<any>) {
-      if (iterable == null) {
+      if (iterable == null)
         throw new TypeError('Cannot read property \'Symbol(Symbol.iterator)\' of undefined')
-      }
 
-      if (!isIterable(iterable)) {
+      if (!isIterable(iterable))
         throw new TypeError('undefined is not a function')
-      }
 
       return func.call(this, iterable)
     }
