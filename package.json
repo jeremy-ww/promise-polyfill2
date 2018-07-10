@@ -1,6 +1,6 @@
 {
   "name": "promise-polyfill2",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Yet another lightweight polyfill for Promise, Follow the Promise/A+ specification.",
   "main": "libs/promise-polyfill2.cjs.js",
   "module": "libs/promise-polyfill2.es.js",
