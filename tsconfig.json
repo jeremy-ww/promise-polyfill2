@@ -4,6 +4,7 @@
     "strict": true,
     "lib": ["es7", "dom"],
     "module": "ESNext",
+    "declaration": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
