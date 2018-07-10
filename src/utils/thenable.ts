@@ -1,7 +1,7 @@
 import isFunction from './isFunction'
 import isObject from './isObject'
 
-interface Thenable {
+export interface Thenable {
   then?: (onFulfilled?: (value?: any) => any, onRejected?: (reason?: any) => any) => void
   isThenable: boolean
 }
