@@ -1,15 +1,17 @@
 {
   "compilerOptions": {
+    "outDir": "dist",
     "target": "es5",
     "strict": true,
-    "lib": ["es7", "dom"],
     "module": "ESNext",
     "declaration": true,
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "noImplicitAny": true,
-    "outDir": "dist"
+    "lib": [
+      "es7",
+      "dom"
+    ]
   },
   "include": [
     "**/*.ts"
