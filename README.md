@@ -1,6 +1,6 @@
 <a href="https://promisesaplus.com/"><img src="./spec.svg" align="right" /></a>
 
-# promise-polyfill2 [![Build Status](https://img.shields.io/circleci/project/github/Army-U/promise-polyfill2.svg?style=flat-square)](https://circleci.com/gh/Army-U/promise-polyfill2) [![Version](https://img.shields.io/npm/v/promise-polyfill2.svg?style=flat-square)](https://www.npmjs.com/package/promise-polyfill2)
+# promise-polyfill2 [![Build Status](https://flat.badgen.net/circleci/github/Army-U/promise-polyfill2/master)](https://circleci.com/gh/Army-U/promise-polyfill2) [![Version](https://flat.badgen.net/npm/v/promise-polyfill2)](https://www.npmjs.com/package/promise-polyfill2)
 
 ### Introduction
 
