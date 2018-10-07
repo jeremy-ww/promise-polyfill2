@@ -18,6 +18,11 @@
     "promise",
     "promise-polyfill"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Army-U/promise-polyfill2.git"
+  },
+  "homepage": "https://github.com/Army-U/promise-polyfill2",
   "author": "Army-U <wuchengkai0@gmail.com>",
   "license": "MIT",
   "devDependencies": {
