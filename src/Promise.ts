@@ -166,15 +166,11 @@ export default class Promise {
   }
 
   finally (onFinally?: () => void) {
-    const wrapFinallyHandler = (value: any) => {
-      return Promise.resolve(
-        isFunction(onFinally) && onFinally!()
-      ).then(() => value)
-    }
+    const p = Promise.resolve(isFunction(onFinally) && onFinally!())
 
     return this.then(
-      (value: any) => wrapFinallyHandler(value),
-      (reason: any) => wrapFinallyHandler(reason)
+      (value: any) => p.then(() => value),
+      (reason: any) => p.then(undefined, () => reason)
     )
   }
 }
